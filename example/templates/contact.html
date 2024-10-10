@@ -1,0 +1,95 @@
+
+{% extends "index.html" %}
+
+{% block title %}
+  Tanishq | Contact-Us
+{% endblock title %}
+
+{% block main %}  
+
+<style>
+  
+</style>
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Contact</h2>
+          <p>Get in Touch: I’m Here to Answer Your Questions and Collaborate on Projects</p>
+        </div><!-- End Section Title -->
+       <div  data-aos="fade-up" style="display: flex; justify-content: center; align-items: center; width: 100%;"><div class="" style="font-size: 2em; width: 70%; margin-bottom: 24px; text-decoration: underline;"><center>{{key}}</center></div></div>
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+  
+          <div class="info-wrap" data-aos="fade-up" data-aos-delay="200">
+            <div class="row gy-5">
+  
+              <div class="col-lg-4">
+                <div class="info-item d-flex align-items-center">
+                  <a href='https://maps.app.goo.gl/RCv5QbyXL5oCZ4bS9' target="_blank">
+                  <i class="bi bi-geo-alt flex-shrink-0"></i>
+                </a>
+                  <div>
+                    <h3>Address</h3>
+                    <p>201, Bhaskar Appartment Manishpuri main Road, Saket Nagar Indore M.P</p>
+                  </div>
+                </div>
+              </div><!-- End Info Item -->
+  
+              <div class="col-lg-4">
+                <div class="info-item d-flex align-items-center">
+                  <a href="tel:+18629996524">
+                  <i class="bi bi-telephone flex-shrink-0"></i>
+                  </a>  
+                  <div>
+                    
+                    <h3>Call Us</h3>
+                    <p>+91 8629996524</p>
+                  </div>
+                </div>
+              </div><!-- End Info Item -->
+  
+              <div class="col-lg-4">
+                <div class="info-item d-flex align-items-center">
+                  <a href="mailto:tanishqparmar83@gmail.com" target="_blank">
+                  <i class="bi bi-envelope flex-shrink-0"></i>
+                  </a>
+                  <div>
+                    <h3>Email Us</h3>
+                    <p>tanishqparmar83@gmail.com</p>
+                  </div>
+                </div>
+              </div><!-- End Info Item -->
+  
+            </div>
+          </div>
+          <form action="" method="post" onsubmit="sub()">
+            {% csrf_token %}
+            <div class="row gy-4">
+              <div class="col-md-6">
+                <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+              </div>
+  
+              <div class="col-md-6 ">
+                <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+              </div>
+  
+              <div class="col-md-12">
+                <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+              </div>
+  
+              <div class="col-md-12">
+                <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+              </div>
+  
+                <center><input type="submit" value="Send Message"style="background-color: cyan; border-radius: 15px; border: none; padding: 15px; width: auto; font-size: 1.2em;"></center>
+              </div>
+  
+            </div>
+          </form><!-- End Contact Form -->
+  
+        </div>
+  
+      </section><!-- /Contact Section -->
+{% endblock main %}
+    
